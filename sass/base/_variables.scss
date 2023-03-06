@@ -13,10 +13,10 @@
   --fs-400: 0.8125rem;
   --fs-500: 0.9625rem;
   --fs-900: 2rem;
+}
 
-  @media screen and (min-width: 50em) {
-    :root {
-      --fs-900: 3rem;
-    }
+@media (min-width: 50em) {
+  :root {
+    --fs-900: 3rem;
   }
 }
