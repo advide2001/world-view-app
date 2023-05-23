@@ -1,4 +1,5 @@
 import React from "react";
+import ColorPalette from "../../components/ColorPalette";
 
 interface Props {}
 
@@ -10,7 +11,8 @@ const page = () => {
 
   return (
     <div>
-      <h1>This is Design System</h1>
+      <h1>Desgin System</h1>
+      <ColorPalette />
     </div>
   );
 };
