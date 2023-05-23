@@ -33,3 +33,11 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+
+#design files
+*.sketch
+*.xd
+*.fig
+design/
+style-guide.md
