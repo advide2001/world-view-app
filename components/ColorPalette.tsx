@@ -2,6 +2,7 @@ import React from "react";
 
 const ColorPalette = () => {
   const colors = [
+<<<<<<< HEAD
     // Light (default)
     { name: "Light Purple", hex: "#B683FF", description: "Gradient color" },
     { name: "Light Input", hex: "#858585", description: "Dark Gray" },
@@ -13,7 +14,24 @@ const ColorPalette = () => {
     { name: "Dark Input", hex: "#858585", description: "Midnight Gray" },
     { name: "Dark Background", hex: "#121E2E", description: "Very Dark Blue" },
     { name: "Dark Elements", hex: "#283640", description: "Dark Blue" },
+=======
+    // Light
+    { name: "Light Purple", hex: "#B683FF", description: "Gradient color" },
+    { name: "Light Input", hex: "#858585", description: "Dark Gray" },
+    {
+      name: "Light Background",
+      hex: "#FAFAFA",
+      description: "Very Light Gray",
+    },
+    { name: "Light Elements", hex: "#FFFFFF", description: "White" },
+    { name: "Light Text", hex: "#FFFFFF", description: "White" },
+    // Dark
+>>>>>>> 207c0feb12568aa2d3a1801a2a51e548e7cb4e94
     { name: "Dark Text", hex: "#0D1C28", description: "Very Dark Blue" },
+    { name: "Dark Purple", hex: "#8000FF", description: "Gradient color" },
+    { name: "Dark Input", hex: "#858585", description: "Midnight Gray" },
+    { name: "Dark Background", hex: "#121E2E", description: "Very Dark Blue" },
+    { name: "Dark Elements", hex: "#283640", description: "Dark Blue" },
   ];
 
   return (
