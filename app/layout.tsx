@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Nunito } from "next/font/google";
 
-const inter = Inter({ subsets: ["latin"] });
+const primary = Nunito({ subsets: ["latin"], weight: ["300", "600", "800"] });
 
 export const metadata = {
   title: "World View",
@@ -15,7 +15,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body className={primary.className}>{children}</body>
     </html>
   );
 }
