@@ -10,8 +10,7 @@ const page = () => {
   }
 
   return (
-    <div>
-      <h1>Desgin System</h1>
+    <div className="mx-[10vw] mt-[5vh]">
       <ColorPalette />
     </div>
   );
