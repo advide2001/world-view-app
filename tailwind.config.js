@@ -22,7 +22,7 @@ module.exports = {
         // very-dark-blue
         "dark-bg": "#121E2E",
         // very-light-gray
-        "light-bg": "#FAFAFA",
+        "light-bg": "#EAEAEA",
 
         // Elements
         // white
