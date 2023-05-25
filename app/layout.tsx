@@ -1,5 +1,6 @@
 import "./globals.css";
 import { Nunito } from "next/font/google";
+import NavigationBar from "../components/NavigationBar";
 
 const primary = Nunito({ subsets: ["latin"], weight: ["300", "600", "800"] });
 
@@ -14,7 +15,8 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="bg-light-bg">
+      <NavigationBar />
       <body className={primary.className}>{children}</body>
     </html>
   );
