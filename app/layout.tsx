@@ -16,8 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className="bg-light-bg">
-      <NavigationBar />
-      <body className={primary.className}>{children}</body>
+      <body className={primary.className}>
+        <NavigationBar />
+        {children}
+      </body>
     </html>
   );
 }
