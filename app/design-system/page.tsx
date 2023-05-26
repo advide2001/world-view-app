@@ -1,5 +1,6 @@
 import React from "react";
 import ColorPalette from "../../components/ColorPalette";
+import CountryCardContainer from "@/components/CountryCardContainer";
 
 interface Props {}
 
@@ -12,6 +13,7 @@ const page = () => {
   return (
     <div className="mx-[10vw] mt-[5vh]">
       <ColorPalette />
+      <CountryCardContainer />
     </div>
   );
 };
