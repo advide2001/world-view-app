@@ -2,9 +2,10 @@
 
 import { Menu, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
+import { MouseEvent } from "react";
 import { ChevronDownIcon, CheckIcon } from "@heroicons/react/20/solid";
 
-interface dropdownMenuClickEvent extends Event {
+interface dropdownMenuClickEvent extends MouseEvent<HTMLButtonElement> {
   target: HTMLButtonElement;
 }
 
