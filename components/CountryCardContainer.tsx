@@ -3,13 +3,12 @@ import CountryCard from "./CountryCard";
 
 interface Props {}
 
-const CountryCardContainer = () => {
+const CountryCardContainer = ({ countriesData }: any) => {
   return (
-    <div className="mt-6 grid grid-cols-4 gap-8">
-      <CountryCard />
-      <CountryCard />
-      <CountryCard />
-      <CountryCard />
+    <div className="mt-6 grid grid-cols-1 gap-8">
+      {countriesData.map((country: any) => (
+        <CountryCard key={country.name} countryData={country} />
+      ))}
     </div>
   );
 };
