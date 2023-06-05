@@ -10,6 +10,12 @@ module.exports = {
         port: "",
         pathname: "/w320/**",
       },
+      {
+        protocol: "https",
+        hostname: "upload.wikimedia.org",
+        port: "",
+        pathname: "/wikipedia/commons/thumb/**",
+      },
     ],
   },
 };
