@@ -4,11 +4,11 @@ interface Props {}
 
 const NavigationBar = () => {
   return (
-    <div className="flex bg-light-elements px-12 py-2">
-      <div>
+    <div className="bg-light-elements py-4 text-center">
+      <div className="flex px-4 lg:px-6 xl:px-8">
         <h1
-          className="bg-gradient-to-r from-light-purple to-dark-purple bg-clip-text text-4xl
-          font-extrabold tracking-wide text-transparent ">
+          className="bg-gradient-to-r from-light-purple to-dark-purple bg-clip-text text-3xl font-extrabold tracking-wide
+          text-transparent sm:text-4xl lg:text-left lg:text-5xl">
           WorldView
         </h1>
       </div>
