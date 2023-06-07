@@ -6,15 +6,15 @@ interface Props {}
 
 const CountryCard = ({ countryData }: any) => {
   return (
-    <div className="inline-flex flex-col overflow-hidden rounded-lg bg-light-elements">
+    <div className="inline-flex w-72 flex-col overflow-hidden rounded-lg bg-light-elements">
       <Image
         width={300}
         height={150}
         src={countryData.flags.png}
         alt="flag"
-        className="w-full object-cover"
+        className="h-[50%] w-full object-cover"
       />
-      <div className="flex flex-col gap-4 px-6 py-10">
+      <div className="flex flex-col gap-4 p-8">
         <p className="text-2xl font-extrabold">{countryData.name}</p>
         <div>
           <p>
