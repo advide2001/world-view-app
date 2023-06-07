@@ -9,12 +9,16 @@ const REGIONS = siteConfig.regions;
 
 export default function Home() {
   return (
-    <div>
-      <SearchBar />
-      <DropdownMenu
-        dropdownOptions={REGIONS}
-        dropdownLabel={"Filter by regions"}
-      />
+    <div className="mx-auto mt-6 flex w-[90%] flex-col gap-4">
+      <div className="flex flex-col gap-4 sm:flex-row">
+        <div className="w-full">
+          <SearchBar />
+        </div>
+        <DropdownMenu
+          dropdownOptions={REGIONS}
+          dropdownLabel={"Filter by regions"}
+        />
+      </div>
       <CountryCardContainer countriesData={countries} />
     </div>
   );
