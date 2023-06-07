@@ -33,11 +33,11 @@ export default function DropdownMenu({
     <Menu as="div" className="relative inline-block text-left">
       <div>
         <Menu.Button
-          className="inline-flex w-full items-center justify-center rounded-md bg-light-elements p-2 font-semibold text-light-text
+          className="inline-flex w-52 items-center justify-center rounded-md bg-light-elements px-2 py-4 font-semibold text-light-text
                     focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75">
           <span>{dropdownLabel}</span>
           <ChevronDownIcon
-            className=" -mr-1 ml-2 h-5 w-5 text-light-text"
+            className="-mr-1 ml-2 h-5 w-5 text-light-text"
             aria-hidden="true"
           />
         </Menu.Button>
@@ -50,7 +50,7 @@ export default function DropdownMenu({
         leave="transition ease-in duration-75"
         leaveFrom="transform opacity-100 scale-100"
         leaveTo="transform opacity-0 scale-95">
-        <Menu.Items className="absolute right-0 mt-2 w-36 origin-top-right rounded-md bg-light-elements shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
+        <Menu.Items className="absolute right-0 mt-2 origin-top-right rounded-md bg-light-elements py-2 pl-2 pr-10 shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
           <div className="p-1">
             {dropdownOptions.map((option) => (
               <Menu.Item key={option.value}>
