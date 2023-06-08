@@ -12,6 +12,8 @@ interface dropdownMenuClickEvent extends MouseEvent<HTMLButtonElement> {
 interface DropdownProps {
   dropdownOptions: Option[];
   dropdownLabel: string;
+  selectedDropdownOption: string;
+  setSelectedDropdownOption: React.Dispatch<React.SetStateAction<string>>;
 }
 
 interface Option {
@@ -22,11 +24,11 @@ interface Option {
 export default function DropdownMenu({
   dropdownLabel,
   dropdownOptions,
+  selectedDropdownOption,
+  setSelectedDropdownOption,
 }: DropdownProps) {
-  const [checkedValue, setCheckedValue] = useState(dropdownOptions[0].value);
-
   const handleMenuItemClick = (e: dropdownMenuClickEvent) => {
-    setCheckedValue(e.target.value);
+    setSelectedDropdownOption(e.target.value);
   };
 
   return (
@@ -58,12 +60,12 @@ export default function DropdownMenu({
                   <button
                     onClick={handleMenuItemClick}
                     className={`${
-                      active || option.value === checkedValue
+                      active || option.value === selectedDropdownOption
                         ? "bg-light-purple text-dark-text"
                         : "text-light-text"
                     } group flex w-full items-center rounded-md p-2`}
                     value={option.value}>
-                    {option.value === checkedValue && (
+                    {option.value === selectedDropdownOption && (
                       <CheckIcon className="mr-2 h-4 w-4" aria-hidden="true" />
                     )}
                     {option.label}
