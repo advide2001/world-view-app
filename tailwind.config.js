@@ -14,9 +14,9 @@ module.exports = {
 
         // Inputs
         // dark-gray
-        "light-input": "#858585",
+        "light-input": "#454545",
         // midnight-gray
-        "dark-input": "#858585",
+        "dark-input": "#454545",
 
         // Backgrounds
         // very-dark-blue
