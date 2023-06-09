@@ -27,7 +27,7 @@ const SearchControlWrapper: FC<Props> = ({ dropdownOptions }) => {
       />
       <DropdownMenu
         dropdownOptions={dropdownOptions}
-        dropdownLabel={"Filter by regions"}
+        dropdownLabel="Filter by regions"
         selectedDropdownOption={regionSelected}
         setSelectedDropdownOption={setRegionSelected}
       />
