@@ -13,7 +13,7 @@ interface DropdownProps {
   dropdownOptions: Option[];
   dropdownLabel: string;
   selectedDropdownOption: string;
-  setSelectedDropdownOption: React.Dispatch<React.SetStateAction<string>>;
+  setSelectedDropdownOption: (searchTerm: string) => void;
 }
 
 interface Option {
