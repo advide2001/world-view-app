@@ -1,6 +1,7 @@
 import React from "react";
 import CountryCardContainer from "@/components/CountryCardContainer";
 import SearchControlWrapper from "@/components/SearchControlWrapper";
+import StoreInitializer from "@/components/StoreInitializer";
 import siteConfig from "@/site.config.js";
 import { useStore } from "@/store/store";
 
@@ -17,6 +18,7 @@ export default function Home() {
 
   return (
     <div className="mx-auto mt-6 flex w-[90%] flex-col gap-4">
+      <StoreInitializer searchterm="" selectedRegion={REGIONS[0].value} />
       <SearchControlWrapper dropdownOptions={REGIONS} />
       <CountryCardContainer countriesData={countries} />
     </div>
