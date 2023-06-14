@@ -1,12 +1,11 @@
 import { create } from "zustand";
 
-const useStore = create<{
+interface searchFormStore {
   searchTerm: string;
   selectedRegion: string;
-}>((set) => ({
-  searchTerm: "",
-  selectedRegion: "",
+}
 
-  setSearchTerm: (searchTerm: string) => set({ searchTerm }),
-  setSelectedRegion: (selectedRegion: string) => set({ selectedRegion }),
+export const useStore = create<searchFormStore>((set) => ({
+  searchTerm: "",
+  selectedRegion: "all",
 }));
