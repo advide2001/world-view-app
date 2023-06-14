@@ -6,7 +6,7 @@ import { MagnifyingGlassIcon } from "@heroicons/react/24/solid";
 
 interface Props {
   searchStringValue: string;
-  setSearchStringValue: React.Dispatch<React.SetStateAction<string>>;
+  setSearchStringValue: (region: string) => void;
 }
 
 function SearchBar({
@@ -15,7 +15,6 @@ function SearchBar({
 }: Props): React.ReactElement {
   const handleSubmit = (event: React.FormEvent<HTMLFormElement>) => {
     event.preventDefault();
-    setSearchStringValue("");
   };
   return (
     <form className="w-full" onSubmit={handleSubmit}>

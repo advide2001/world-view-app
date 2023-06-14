@@ -1,6 +1,7 @@
 "use client";
 
 import React, { FC, useState } from "react";
+import { useStore } from "@/store/store";
 import DropdownMenu from "./DropdownMenu";
 import SearchBar from "./SearchBar";
 
@@ -14,22 +15,27 @@ interface Option {
 }
 
 const SearchControlWrapper: FC<Props> = ({ dropdownOptions }) => {
-  const [searchString, setSearchString] = useState("");
-  const [regionSelected, setRegionSelected] = useState(
-    dropdownOptions[0].value
-  );
+  // fetch store data
+  const { searchTerm, selectedRegion } = useStore();
+  // set store data
+  const setSearchTerm = (searchTerm: string) => {
+    useStore.setState({ searchTerm: searchTerm });
+  };
+  const setSelectedRegion = (region: string) => {
+    useStore.setState({ selectedRegion: region });
+  };
 
   return (
     <div className="flex flex-col gap-4 sm:flex-row">
       <SearchBar
-        searchStringValue={searchString}
-        setSearchStringValue={setSearchString}
+        searchStringValue={searchTerm}
+        setSearchStringValue={setSearchTerm}
       />
       <DropdownMenu
         dropdownOptions={dropdownOptions}
         dropdownLabel="Filter by regions"
-        selectedDropdownOption={regionSelected}
-        setSelectedDropdownOption={setRegionSelected}
+        selectedDropdownOption={selectedRegion}
+        setSelectedDropdownOption={setSelectedRegion}
       />
     </div>
   );
