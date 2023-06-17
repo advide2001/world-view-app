@@ -7,16 +7,23 @@ import { useStore } from "@/store/store";
 interface Props {}
 
 const CountryCardContainer = ({ countriesData }: any) => {
-  const searchTerm = useStore((state) => state.searchTerm);
-  const selectedRegion = useStore((state) => state.selectedRegion);
+  const { searchTerm, selectedRegion } = useStore();
 
-  console.log("making request with searchTerm: ", searchTerm);
-  console.log("making request with selectedRegion: ", selectedRegion);
+  const filteredCountriesData = countriesData.filter((country: any) => {
+    const searchTermValidity =
+      searchTerm === "" ||
+      country.name.common.toLowerCase().includes(searchTerm.toLowerCase());
+
+    const selectedRegionValidity =
+      selectedRegion === "All" || country.region === selectedRegion;
+
+    return searchTermValidity && selectedRegionValidity;
+  });
 
   return (
     <div className="mx-auto mt-4 grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-14 lg:grid-cols-3 lg:gap-16 2xl:grid-cols-4">
-      {countriesData.map((country: any) => (
-        <CountryCard key={country.name} countryData={country} />
+      {filteredCountriesData.map((country: any) => (
+        <CountryCard key={country.name.common} countryData={country} />
       ))}
     </div>
   );
