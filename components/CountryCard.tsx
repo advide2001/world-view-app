@@ -15,7 +15,7 @@ const CountryCard = ({ countryData }: any) => {
         className="h-[50%] w-full object-cover"
       />
       <div className="flex flex-col gap-4 p-8">
-        <p className="text-2xl font-extrabold">{countryData.name}</p>
+        <p className="text-2xl font-extrabold">{countryData.name.common}</p>
         <div>
           <p>
             <span className="font-semibold">Population: </span>
