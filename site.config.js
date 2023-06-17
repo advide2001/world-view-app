@@ -1,11 +1,11 @@
 const siteConfig = {
   regions: [
-    { label: "All", value: "all" },
-    { label: "Asia", value: "asia" },
-    { label: "America", value: "america" },
-    { label: "Europe", value: "europe" },
-    { label: "Africa", value: "africa" },
-    { label: "Oceania", value: "oceania" },
+    { label: "All", value: "All" },
+    { label: "Asia", value: "Asia" },
+    { label: "America", value: "Americas" },
+    { label: "Europe", value: "Europe" },
+    { label: "Africa", value: "Africa" },
+    { label: "Oceania", value: "Oceania" },
   ],
   sortingParams: [
     { label: "Name (A-Z)", value: "name-asc" },
